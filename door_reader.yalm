@@ -1,0 +1,18 @@
+esphome:
+  includes:
+    - wiegand_device.h
+  name: door_reader
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+mqtt:
+  broker: 192.168.1.xx
+  username: xxx
+  password: xxx
+  discovery: True
+  reboot_timeout: 1min
+
+custom_component:
+  - lambda: |-
+       auto wiegand = new WiegandReader(21, 23);
+       return {wiegand};
