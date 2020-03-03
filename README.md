@@ -15,3 +15,14 @@ how to add the module?
     /config/esphome/door_reader/src/wiegand_device.h and update de variables topic and doorID.
 5. uncomment the line with the #include wiegand_device.h in the yalm
 6. Compile again.
+
+
+additional info.
+-If you are using hassio you can check the messages in developers tool sucribing to your set up topic.
+
+- payload format
+{
+“door”: 2,
+“code”: 9999999,
+“timeStamp”: “xx-yy-zz 00:00:00”
+}

@@ -76,7 +76,7 @@ class WiegandReader : public PollingComponent, public CustomMQTTDevice {
         unsigned long lastCode = 0;
         std::string keyCodes = "";
 
-        std::string topic = ""; // your control access topic
+        String topic = "accessControl/door2"; // your control access topic
         int doorNumber = 2; // your door ID
 
     
