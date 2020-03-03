@@ -12,6 +12,12 @@ mqtt:
   discovery: True
   reboot_timeout: 1min
 
+time:
+  #- platform: homeassistant
+  - platform: sntp
+    id: sntp_time
+    servers:  [0.pool.ntp.org, 1.pool.ntp.org , 2.pool.ntp.org]
+
 custom_component:
   - lambda: |-
        auto wiegand = new WiegandReader(21, 23);
